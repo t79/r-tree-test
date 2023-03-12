@@ -1,0 +1,65 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 90vh;
+    background-color: antiquewhite;
+}
+
+#game-canvas {
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border: 2px solid black;
+    margin: 0;
+}
+
+#buttons-container {
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    gap: 0;
+}
+
+input {
+    margin: 0;
+    margin-right: 0;
+}
+
+.add-button {
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0.8rem;
+    margin: 0;
+    background-color: darkgrey;
+    color: white;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: hotpink;
+}
+
+.button-border {
+    border-width: 0px 0 2px 1px;
+    border-color: black;
+}
+
+.button-border:first-child {
+    border-width: 0 0 2px 2px;
+}
+
+.button-border:last-child {
+    border-width: 0px 2px 2px 1px;
+}
