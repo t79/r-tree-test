@@ -36,6 +36,28 @@ class GAMEr {
         GAMEr.gameContext.canvas.height = box.height;
         GAMEr.Draw();
     }
+}
 
+class RPoint {
+    constructor(x, y) {
+        this.x = x; // float
+        this.y = y; // float
+    }
+}
 
+class RRect {
+    constructor(lowLeft, highRight) {
+        this.lowLeft = lowLeft; // RPoint
+        this.highRight = highRight; // RPoint
+    }
+}
+
+class RNode {
+    constructor(level) {
+        this.level = level // "int" leaf = 0 else branch
+        this.entries = [] // <RRect, RNode bransh or leaf>
+    }
+    set entry({rect, node}) {
+        this.entries.push({rect, node});
+    }
 }
